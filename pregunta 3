@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main(){
+
+	int mat1[3][2],mat2[2][3],resultado=0, resul[3][3];
+	int i,j,c;
+	for(i=0;i<3;i++)
+		for(j=0;j<3;j++)
+			resul[i][j]=0;
+			for(i=0;i<3;i++){
+				for(j=0;j<2;j++){
+					printf("\nintroduzca un valor matriz 1[%d][%d]: ",i,j);
+					scanf("%d", &mat1[i][j]);
+				}
+			}
+			for(i=0;i<2;i++){
+				for(j=0;j<3;j++){
+					printf("\nIntroduzca un valor matriz 2[%d][%d]: ",i,j);
+					scanf("%d", &mat2[i][j]);
+				}
+			}
+			for(i=0;i<3;i++){
+				for(c=0;c<3;c++){
+					for(j=0;j<2;j++){
+						resultado=resultado+(mat1[i][j]*mat2[j][c]);
+					}
+				resul[i][c]=resultado;
+				resultado=0;
+				}
+			}
+
+	printf("\nMatriz 1\n");
+		for(i=0;i<3;i++){
+			for(j=0;j<2;j++){
+				printf("\t%d",mat1[i][j]);
+			}
+		printf("\n");
+		}
+
+	printf("\nMatriz 2\n");
+	for(i=0;i<2;i++){
+		for(j=0;j<3;j++){
+			printf("\t%d",mat2[i][j]);
+		}
+	printf("\n");
+	}
+
+	printf("\nMatriz multiplicada\n");
+	for(i=0;i<3;i++){
+		for(c=0;c<3;c++){
+			printf("\t%d",resul[i][c]);
+		}
+		printf("\n");
+	}
+}
