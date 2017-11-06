@@ -1,0 +1,17 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main (){
+	int i=0;
+	int j=0;
+	int matriz[2][2] = {{10,45},{11,85}};
+	int x;
+	for (i=0; i<3; i++){
+		for (j=0; j<3; j++){
+			x= matriz[i][j];
+       		if(x%2!=0){
+			printf("Numero impar: %i \n", x);
+        	}
+    	}
+    }
+}
